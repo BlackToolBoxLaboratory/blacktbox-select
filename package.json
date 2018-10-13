@@ -1,0 +1,82 @@
+{
+    "name": "blacktbox-select",
+    "version": "1.0.0",
+    "description": "Select for react",
+    "keywords": [
+        "BTBLibrary",
+        "blacktbox-select",
+        "react",
+        "select"
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Van Noel",
+        "email": "vannoel0628@gmail.com"
+    },
+    "homepage": "https://blacktoolboxlaboratory.github.io/",
+    "bugs": {
+        "url": "https://github.com/BlackToolBoxLaboratory/blacktbox-select/issues",
+        "email": "vannoel0628@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BlackToolBoxLaboratory/blacktbox-select.git"
+    },
+    "files": [
+        "lib",
+        "es",
+        "umd",
+        "css"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "jsnext:main": "es/index.js",
+    "scripts": {
+        "test": "jest",
+        "cleanModules": "rimraf node_modules",
+        "cleanDir": "rimraf lib dist es",
+        "lessBuildup": "gulp cssBuildup",
+        "build": "npm run lint && node ./script/build.js && npm run lessBuildup",
+        "lint": "./node_modules/.bin/eslint --fix module/*.js",
+        "prepare": "npm run cleanDir && npm run build",
+        "backup": "gulp backup"
+    },
+    "peerDependencies": {
+        "react": ">=15"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-jest": "^23.6.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.18",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "cross-env": "^5.2.0",
+        "enzyme": "^3.6.0",
+        "enzyme-adapter-react-16": "^1.5.0",
+        "eslint": "^5.6.1",
+        "eslint-plugin-react": "^7.11.1",
+        "gulp": "^4.0.0",
+        "gulp-clean-css": "^3.10.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-less": "^4.0.1",
+        "gulp-less-to-scss": "0.0.9",
+        "jest": "^23.6.0",
+        "react-test-renderer": "^16.5.2",
+        "rimraf": "^2.6.2",
+        "rollup": "^0.66.2",
+        "rollup-plugin-babel": "^3.0.2",
+        "rollup-plugin-commonjs": "^9.1.8",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-replace": "^2.0.0",
+        "rollup-plugin-uglify": "^6.0.0",
+        "uglify-es": "^3.3.9"
+    },
+    "dependencies": {
+        "prop-types": "^15.6.2",
+        "react": "^16.5.2",
+        "react-dom": "^16.5.2"
+    }
+}

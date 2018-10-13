@@ -1,0 +1,62 @@
+.btb-select {
+  @content_size: 14px;
+  @content_padding: 6px 12px;
+  @content_vertical_align: middle;
+  *, 
+  *::after, 
+  *::before {
+    box-sizing: border-box;
+  }
+
+  display: table;
+  position: relative;
+  .select-input {
+    display: table-row;
+  }
+  .input-text {
+    display: table-cell;
+    font-size: @content_size;
+    padding: @content_padding;
+    vertical-align: @content_vertical_align;
+    width: 100%;
+  }
+  .input-addition {
+    display: table-cell;
+    font-size: @content_size;
+    padding: @content_padding;
+    vertical-align: @content_vertical_align;
+    background-color: #ccc;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    text-align: center;
+    width: 1%;
+    cursor: pointer;
+  }
+
+  .select-optionList {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid black;
+  }
+
+  .optionList-head,
+  .optionList-body {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .head-row,
+  .body-row {
+    display: table-row;
+  }
+  .body-row:hover,
+  .row-noData:hover {
+    cursor: pointer;
+  }
+  .row-cell {
+    display: table-cell;
+  }
+  .cell-noData {
+    text-align: center;
+  }
+}
