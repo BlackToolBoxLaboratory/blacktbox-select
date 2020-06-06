@@ -1,3 +1,5 @@
+# [Deprecated] It will be refactored to [react-searchelector](https://github.com/BlackToolBoxLaboratory/react-searchelector) as a new package.
+
 # blacktbox-select
 
 Create select with [React](https://facebook.github.io/react).
